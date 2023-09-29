@@ -1,4 +1,12 @@
-<Layout>
+import Image from 'next/image';
+import Head from 'next/head';
+import { Html } from 'next/document';
+import Layout from '../../components/layout';
+import Navbar from '../../components/landing/Navbar';
+
+export default function Project() {
+  return (
+    <Layout>
         <Head>
             <link href='https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600;700;800;900' rel='stylesheet'></link>
         </Head>
@@ -21,37 +29,19 @@
             </div>
         </div>
   
-        <div class="logo">
-            <div id="logo_circle_text">LOGO</div>
-    
-            <div id="logo_title" class="element">
-                <div id="logo_title_start">GAMMA-RAY</div>
-                <div id="logo_title_end">BURSTS</div>
-            </div>
-        </div>
+        
   
         <div id="background_fade"></div>
   
-        <div class="about_us">
-            <div id="about_us_title">ABOUT US</div>
-            <div id="about_us_text">
+        <div class="project_info">
+            <div id="project_title">Project</div>
+            <div id="project_text">
                 Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. 
             </div>
         </div>
         
 
-        <nav>
-            <div id = "nav-pages-section" class = "nav-section">
-                <a href="#">Home</a>
-                <a href="#">Project</a>
-                <a href="#">Code</a>
-                <a href="#">Contact Us</a>
-            </div>
-  
-            <div id= "nav-blank-section" class = "nav-section"></div>
-  
-            <div id = "nav-login-section" class = "nav-section">
-                <a href="#">Log in</a>
-            </div>
-        </nav>
+        <Navbar/>
     </Layout>
+  );
+}

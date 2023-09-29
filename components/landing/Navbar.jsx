@@ -10,8 +10,9 @@ function Navbar() {
         <div id = "nav-pages-section" class = "nav-section">
             <Link id="home" class={currentPage === '/' ? "selected" :""} href="/">Home</Link>
             <Link id="project" class={currentPage === '/menu/project' ? "selected" :""} href="/menu/project">Project</Link>
-            <a id="code"   class={currentPage === 'code' ? "selected" :""} href="#">Code</a>
-            <a id="contact"class={currentPage === 'contact' ? "selected" :""} href="#">Contact Us</a>
+            <Link id="news" class={currentPage === '/menu/news' ? "selected" : ""} href="/menu/news">News</Link>
+            <a id="code"   class={currentPage === '/menu/code' ? "selected" :""} href="/menu/code">Code</a>
+            <a id="contact"class={currentPage === '/menu/contact' ? "selected" :""} href="/menu/contact">Contact Us</a>
         </div>
 
         <div id= "nav-blank-section" class = "nav-section"></div>
