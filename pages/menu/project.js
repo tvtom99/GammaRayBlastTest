@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { Html } from 'next/document';
 import Layout from '../../components/layout';
-import Link from 'next/Link';
+import Navbar from '../../components/landing/Navbar';
 
 export default function Project() {
   return (
@@ -41,20 +41,7 @@ export default function Project() {
         </div>
         
 
-        <nav>
-            <div id = "nav-pages-section" class = "nav-section">
-                <Link   id="home" href="../">Home</Link>
-                <Link      id="project" class="selected" href="#">Project</Link>
-                <a id="code"    href="#">Code</a>
-                <a id="contact" href="#">Contact Us</a>
-            </div>
-  
-            <div id= "nav-blank-section" class = "nav-section"></div>
-  
-            <div id = "nav-login-section" class = "nav-section">
-                <a href="#">Log in</a>
-            </div>
-        </nav>
+        <Navbar/>
     </Layout>
   );
 }
