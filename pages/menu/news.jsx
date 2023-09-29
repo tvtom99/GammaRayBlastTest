@@ -3,8 +3,10 @@ import Head from 'next/head';
 import { Html } from 'next/document';
 import Layout from '../../components/layout';
 import Navbar from '../../components/landing/Navbar';
+import { getSortedPostsData } from '../../lib/posts.js';
+import utilStyles from '../_app.js';
 
-export default function Project() {
+export default function News({ allPostsData }) {
   return (
     <Layout>
         <Head>
@@ -34,14 +36,33 @@ export default function Project() {
         <div id="background_fade"></div>
   
         <div class="project_info">
-            <div id="project_title">Project</div>
-            <div id="project_text">
-                Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. Hello I am Person Name, you can contact me on XXXXXXX or using my email example@emailprovider.com.au. My work involves doing things and other tasks, the rest of this is just filler so you can stop reading now. 
-            </div>
+            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+                <h2 className={utilStyles.headingLg}>Posts</h2>
+                <ul className={utilStyles.list}>
+                    {allPostsData.map(({ id, date, title }) => (
+                <li className={utilStyles.listItem} key={id}>
+                        {title}
+                    <br />
+                        {id}
+                    <br />
+                        {date}
+                    </li>
+                    ))}
+                </ul>
+            </section>
         </div>
         
 
         <Navbar/>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+    const allPostsData=getSortedPostsData();
+    return {
+        props: {
+            allPostsData,
+        },
+    };
 }

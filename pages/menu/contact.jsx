@@ -4,7 +4,7 @@ import { Html } from 'next/document';
 import Layout from '../../components/layout';
 import Navbar from '../../components/landing/Navbar';
 
-export default function Project() {
+export default function Contact() {
   return (
     <Layout>
         <Head>
