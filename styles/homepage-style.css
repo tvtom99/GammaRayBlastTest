@@ -41,6 +41,7 @@ nav
   width: 100%;
 }
 
+
 nav > .nav-section
 {
   padding: 2.3rem 2rem;
@@ -56,7 +57,8 @@ nav > .nav-section
   gap: 6.5rem;
   padding: 3rem 3rem;
   white-space: nowrap;
-  
+  text-align: center;
+  margin: 0px auto;
 }
 
 #nav-blank-section
@@ -186,9 +188,20 @@ nav > .nav-section
   font-size: 12px;
 }
 
+@keyframes growSelected
+{
+  0% {
+    font-size: var(--font-size-default);
+  }
+  100%{
+    font-size: var(--font-size-enlarged);
+  }
+}
+
 .selected
 {
     font-size: var(--font-size-enlarged);
     color: var(--menu-selected-color);
     top: -45%;
+    animation: 230ms ease-out 0s 1 growSelected;
 }

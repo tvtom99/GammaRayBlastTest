@@ -4,7 +4,7 @@ import { Html } from 'next/document';
 import Layout from '../components/layout';
 import Body from '../components/landing/Body';
 import Navbar from '../components/landing/Navbar';
-import { getSortedPostsData } from '../lib/posts.js';
+
 
 export default function Home({ allPostsData }) {
   return (
@@ -51,13 +51,4 @@ export default function Home({ allPostsData }) {
         <Navbar />
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-    const allPostsData=getSortedPostsData();
-    return {
-        props: {
-            allPostsData,
-        },
-    };
 }
