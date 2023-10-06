@@ -1,1 +1,100 @@
 /*Doesn't seem to do anything??*/
+
+:root
+{
+    --menu-selected-color: #98EC65;
+}
+
+/*Removing underline and stuff from links*/
+a
+{
+    text-decoration: none;
+}
+
+/*This is used to darken the image so text can be read against it easier*/
+body
+{
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+nav
+{
+    display: flex;
+    width: 100%;  
+    z-index: 1;  
+    padding: 2.3rem 2rem;
+}
+
+nav > #nav-blank-section
+{
+    flex-grow: 1;
+}
+
+nav a
+{
+    color: #FFFFFF;
+    font-size: 16pt;
+    font-family: "Poppings", sans-serif;
+    font-weight: 900;
+    padding: 2.3rem 2rem;
+    margin: 0.5rem 2rem;
+}
+
+nav .selected
+{
+    color: var(--menu-selected-color);
+}
+
+.backgroundImages
+{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: auto;
+}
+
+#telescope
+{
+    position: absolute;
+    width: 100vw;
+    height: auto;
+}
+
+#galaxy
+{
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    opacity: 0.3;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+    gap: 3rem;
+}
+
+.content #aboutUs{
+    color: #FFFFFF;
+    font-family: "Poppings", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.content #about_us_text
+{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.content #aboutUs #title
+{
+    font-size: 50px;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 25px;
+}

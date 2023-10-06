@@ -32,11 +32,18 @@ export default function Home({ allPostsData }) {
         </div>
   
         <div class="logo">
-            <div id="logo_circle_text">LOGO</div>
+            <div id="logo_circle">
+                <Image
+                    id = "logo"
+                    src = "/images/logo.png"
+                    height = {350}    
+                    width = {350}>
+                </Image>
+            </div>
     
             <div id="logo_title" class="element">
-                <div id="logo_title_start">GAMMA-RAY</div>
-                <div id="logo_title_end">BURSTS</div>
+                <div id="logo_title_start">PANRADIO</div>
+                <div id="logo_title_end">GRB</div>
             </div>
         </div>
   
